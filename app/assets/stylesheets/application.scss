@@ -1,1 +1,49 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+body {
+  color: #1c3643;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  background-color: #f3f3f3;
+}
+
+.anton {
+  font-family: 'Anton', sans-serif;
+}
+
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+
+nav.navbar {
+  background: -webkit-linear-gradient(0deg, #1c3643 0, #273b47 25%, #1e5372);
+  box-shadow: 0 0 5px 1px rgba(66, 88, 97, 0.55);
+  a, p {
+    color: #fff;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .nav-item {
+    &:last-child {
+      padding-left: .5em;
+      padding-right: 0;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.btn-platzi, input.btn-platzi {
+  background: -webkit-linear-gradient(right, #95ca3e 0%, #95ca3e 50%, #85c638 100%);
+  background: -moz-linear-gradient(right, #95ca3e 0%, #95ca3e 50%, #85c638 100%);
+  background: -o-linear-gradient(right, #95ca3e 0%, #95ca3e 50%, #85c638 100%);
+  background: -ms-linear-gradient(right, #95ca3e 0%, #95ca3e 50%, #85c638 100%);
+  background: linear-gradient(to left, #95ca3e 0%, #95ca3e 50%, #85c638 100%);
+  -webkit-box-shadow: 0 1px 1px 0 #58902d;
+  box-shadow: 0 1px 1px 0 #58902d;
+}
