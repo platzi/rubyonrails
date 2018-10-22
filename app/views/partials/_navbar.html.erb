@@ -13,18 +13,18 @@
         <a href="#" class="nav-link">Posts</a>
         <%# link_to 'Posts', articles_path, class: 'nav-link' %>
       </li>
-      <!-- <li class="nav-item">
+      <li class="nav-item">
         <p class="nav-link">|</p>
-      </li> -->
-      <%# if user_signed_in? %>
-        <!-- <li class="nav-item"> -->
-          <%# link_to('Cerrar sesión', destroy_user_session_path, class: 'btn btn-platzi', method: :delete) %>
-        <!-- </li> -->
-      <%# else %>
-        <!-- <li class="nav-item"> -->
-          <%# link_to 'Inicia sesión', user_session_path, class: 'btn btn-platzi' %>
-        <!-- </li> -->
-      <%# end %>
+      </li>
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to('Cerrar sesión', destroy_user_session_path, class: 'btn btn-platzi', method: :delete) %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to 'Inicia sesión', user_session_path, class: 'btn btn-platzi' %>
+        </li>
+      <% end %>
     </ul>
   </div>
 </nav>
