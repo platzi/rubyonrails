@@ -1,0 +1,8 @@
+Running in verbose mode
+
+-----------------------------------------------------------------
+  pg_upgrade run on Mon Oct 22 13:33:35 2018
+-----------------------------------------------------------------
+
+check for "/usr/local/Cellar/postgresql/10.5.0/bin" failed: No such file or directory
+
