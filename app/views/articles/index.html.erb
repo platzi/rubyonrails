@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-12">
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <h1 class="article-header">Todos los artículos</h1>
+          </div>
+          <% if user_signed_in? %>
+            <div class="col-12 text-right mt-auto">
+              <%= link_to '<i class="fas fa-plus"></i> Artículo'.html_safe, new_article_path, class: 'btn btn-platzi-blue' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <% @articles.each do |article| %>
+        <div class="card">
+          <div class="card-body">
+            <h2 class="anton"><%= link_to article.title, articles_show_path %></h2>
+            <hr>
+            <div class="rawbody"><%= (raw article.body) %></div>
+          </div>
+        </div>
+        <br>
+      <% end %>
+    </div>
+  </div>
+</div>
+<script>
+  $('.rawbody > p').not(':first-child, :nth-child(2)').hide();
+  $('.rawbody > ol').hide();
+  $('.rawbody > ul').hide();
+</script>
