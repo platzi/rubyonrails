@@ -1,0 +1,18 @@
+<div class="container">
+  <%= form_with(model: article, local: true) do |f| %>
+  <div class="form-group">
+    <%= f.label :title, "Título" %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :body, "Contenido:" %>
+    <%= f.cktext_area :body, class: 'form-control' %>
+  </div>
+
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
+  <div class="actions">
+    <%= f.submit 'Publicar', class: 'btn btn-platzi-blue' %>
+  </div>
+  <% end %>
+</div>

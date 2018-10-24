@@ -1,2 +1,20 @@
-<h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
+<div class="row">
+  <div class="col-12">
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <h1 class="article-header">Nuevo artículo</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <%= render 'form', article: @article %>
+    </div>
+  </div>
+</div>
